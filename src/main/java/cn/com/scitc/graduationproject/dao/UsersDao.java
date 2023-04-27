@@ -16,6 +16,8 @@ public interface UsersDao extends JpaRepository<Users,Integer> {
     //查询老师
     @Query(value ="select * from users where roleid =?", nativeQuery = true)
     Page<Users> findTeacher(Integer roleid,Pageable pageable);
+    //删除老师
+    
     //查询是该用户名否存在
     @Query(value ="select * from users where username =?", nativeQuery = true)
      Users findByUsername(String username);
